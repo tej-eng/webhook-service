@@ -21,7 +21,7 @@ services:
         condition: service_healthy
     environment:
       RABBITMQ_URL: amqp://guest:guest@rabbitmq:5672
-      RAZORPAY_WEBHOOK_SECRET: your_webhook_secret_here
+      RAZORPAY_WEBHOOK_SECRET: nkdPt8OpyM5qj33oBqEPi4qo
       PORT: 8004
     ports:
       - "8004:8004"  
