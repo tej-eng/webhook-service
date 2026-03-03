@@ -1,6 +1,7 @@
 services:
   webhook-service:
     build: .
+    container_name: webhook-service
     restart: always
     environment:
       RABBITMQ_URL: amqp://guest:guest@dhwaniastro-rabbitmq:5672
@@ -8,8 +9,10 @@ services:
       PORT: 8004
     ports:
       - "8004:8004"
+    mem_limit: 512m
+    cpus: 0.5
     networks:
-      - dhwaniastro-net  # use the external network
+      - dhwaniastro-net
 
 networks:
   dhwaniastro-net:
